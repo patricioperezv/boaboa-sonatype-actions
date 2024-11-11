@@ -42,7 +42,11 @@ jobs:
           origin_tags=$(cat origin_tags.json | jq -r '.[]')
           echo "Upstream tags: $upstream_tags"
           echo "Origin tags: $origin_tags"
-          out_of_sync_tags=$(comm -3 <(echo "$upstream_tags" | tr ' ' '\n' | sort) <(echo "$origin_tags" | tr ' ' '\n' | sort | grep -v '^$') | grep -v -E "$(echo $excluded_tags | sed 's/ /|/g')" || true)
+          if [ -z "$excluded_tags" ]; then
+            out_of_sync_tags=$(comm -3 <(echo "$upstream_tags" | tr ' ' '\n' | sort) <(echo "$origin_tags" | tr ' ' '\n' | sort | grep -v '^$'))
+          else
+            out_of_sync_tags=$(comm -3 <(echo "$upstream_tags" | tr ' ' '\n' | sort) <(echo "$origin_tags" | tr ' ' '\n' | sort | grep -v '^$') | grep -v -E "$(echo $excluded_tags | sed 's/ /|/g')" || true)
+          fi
           echo "Out of sync tags: $out_of_sync_tags"
           if [ -z "$out_of_sync_tags" ]; then
             echo "No tags to update"
