@@ -31341,7 +31341,7 @@ exports.IQ_CLI_DOWNLOAD_URL = exports.IQ_CLI_VERSION = exports.LATEST_IQ_VERSION
  */
 exports.IQ_CLI_JAR = 'sonatype-iq-cli.jar';
 exports.IQ_VERSION_TO_COMPLETE = '1.{iq-cli-version}.0-01';
-exports.DOWNLOAD_URL = 'https://download.sonatype.com/clm/scanner/nexus-iq-cli-{iq-cli-version}.jar';
+exports.DOWNLOAD_URL = 'https://nexus.boaboa.org/repository/sonatype-downloads-raw-proxy/clm/scanner/nexus-iq-cli-{iq-cli-version}.jar';
 exports.MINIMUM_SUPPORTED_IQ_VERSION = 137;
 exports.LATEST_IQ_VERSION = '1.184.0-01'; // This should be updated to the latest IQ CLI version with each release
 exports.IQ_CLI_VERSION = 'iq-cli-version';
@@ -31503,7 +31503,7 @@ const get_semver_version_1 = __nccwpck_require__(8917);
 async function run() {
     try {
         // If provided, iq-cli.jar found in this url will be downloaded
-        // Otherwise we download the latest from download.sonatype.com
+        // Otherwise we download the latest from nexus.boaboa.org/repository/sonatype-downloads-raw-proxy
         // (unless a specific version was requested by yet another optional parameter: iq-cli-version)
         const iqCliUrl = core.getInput(constants_1.IQ_CLI_DOWNLOAD_URL);
         let iqCliVersion = core.getInput(constants_1.IQ_CLI_VERSION);
