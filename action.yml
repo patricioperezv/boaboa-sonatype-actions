@@ -9,4 +9,4 @@ branding:
 runs:
   using: 'composite'
   steps:
-    - uses: sonatype/actions/evaluate@v1
+    - uses: patricioperezv/boaboa-sonatype-actions/evaluate@v1

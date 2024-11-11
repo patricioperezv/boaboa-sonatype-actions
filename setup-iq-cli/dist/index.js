@@ -31341,7 +31341,7 @@ exports.LATEST_IQ_VERSION = exports.MINIMUM_SUPPORTED_IQ_VERSION = exports.DOWNL
  */
 exports.IQ_CLI_JAR = 'sonatype-iq-cli.jar';
 exports.IQ_VERSION_TO_COMPLETE = '1.{iq-cli-version}.0-01';
-exports.DOWNLOAD_URL = 'https://download.sonatype.com/clm/scanner/nexus-iq-cli-{iq-cli-version}.jar';
+exports.DOWNLOAD_URL = 'https://nexus.boaboa.org/repository/sonatype-downloads-raw-proxy/clm/scanner/nexus-iq-cli-{iq-cli-version}.jar';
 exports.MINIMUM_SUPPORTED_IQ_VERSION = 137;
 exports.LATEST_IQ_VERSION = '1.180.0-01'; // This should be updated to the latest IQ CLI version with each release
 

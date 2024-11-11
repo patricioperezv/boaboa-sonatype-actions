@@ -1,4 +1,5 @@
-<!--
+> [!IMPORTANT]
+> This github actions set is monkeypatched from sonatype/actions to force downloading the sonatype cli from our boaboa nexus repo. If you need internal support you know where to find us<!--
 
      Copyright (c) 2023-present Sonatype, Inc. All rights reserved.
      Includes the third-party code listed at https://links.sonatype.com/products/clm/attributions.
