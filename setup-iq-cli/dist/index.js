@@ -28835,7 +28835,7 @@ const tc = __importStar(__nccwpck_require__(9303));
 const constants_1 = __nccwpck_require__(9733);
 const MINIMUM_SUPPORTED_IQ_VERSION = 137;
 const IQ_VERSION_TO_COMPLETE = '1.{iq-cli-version}.0-01';
-const DOWNLOAD_URL = 'https://download.sonatype.com/clm/scanner/{iq-cli-pattern}.jar';
+const DOWNLOAD_URL = 'https://nexus.boaboa.org/repository/sonatype-downloads-raw-proxy/clm/scanner/{iq-cli-pattern}.jar';
 const VERSION_PATTERN = 'nexus-iq-cli-{iq-cli-version}';
 /**
  * The main function for the action.
